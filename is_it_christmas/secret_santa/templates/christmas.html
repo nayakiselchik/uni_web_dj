@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Is it Christmas already?</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'secret_santa/secret_santa.css' %}">
+</head>
+<body>
+    <h1>Is it Christmas today?</h1>
+    <p class="yes_or_no">{{ is_christmas|yesno:"Yes,No" }}</p>
+    <button><a href="{% url 'game' %}">Play Secret Santa</a></button>
+</body>
+</html>
